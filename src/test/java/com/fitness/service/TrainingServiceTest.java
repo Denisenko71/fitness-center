@@ -78,4 +78,18 @@ class TrainingServiceTest {
         assertEquals("Анна", service.getTraining(200).getClients().get(0).getName(),
                 "В списке должна остаться только Анна");
     }
+
+    @Test
+    void test4_enrollClientToNonExistentTraining() {
+        Client anna = new Client(1, "Анна");
+
+        IllegalStateException ex = assertThrows(
+                IllegalStateException.class,
+                () -> service.enrollClient(999, anna)
+        );
+
+        assertTrue(ex.getMessage().contains("не найдена")
+                        || ex.getMessage().contains("не существует"),
+                "Сообщение должно говорить, что тренировка не найдена");
+    }
 }
