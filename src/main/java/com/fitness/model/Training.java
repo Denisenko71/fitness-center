@@ -42,6 +42,10 @@ public class Training {
         clients.add(client);
     }
 
+    public boolean isFull() {
+        return clients.size() >= maxParticipants;
+    }
+
     @Override
     public String toString() {
         return "Training{id=" + id + ", name='" + name +
