@@ -83,8 +83,8 @@ class TrainingServiceTest {
     void test4_enrollClientToNonExistentTraining() {
         Client anna = new Client(1, "Анна");
 
-        IllegalStateException ex = assertThrows(
-                IllegalStateException.class,
+        IllegalArgumentException ex = assertThrows(
+                IllegalArgumentException.class,
                 () -> service.enrollClient(999, anna)
         );
 
