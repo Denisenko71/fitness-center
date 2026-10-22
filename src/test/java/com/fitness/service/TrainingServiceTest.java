@@ -55,7 +55,7 @@ class TrainingServiceTest {
 
         assertTrue(ex.getMessage().contains("уже записан"),
                 "Сообщение должно говорить, что клиент уже записан");
-        assertEquals(1, service.getTraining(100).getClients().size(),
+        assertEquals(999, service.getTraining(100).getClients().size(),
                 "Клиент не должен дублироваться в списке");
     }
 
