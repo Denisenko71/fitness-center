@@ -1,6 +1,7 @@
 package com.fitness.model;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Training {
     private final int id;
