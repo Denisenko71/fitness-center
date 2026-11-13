@@ -9,3 +9,4 @@ public interface TrainingRepository {
     Training findById(int id);
     List<Training> findAll();
 }
+

@@ -29,3 +29,4 @@ public class Trainer {
                 "', specialization='" + specialization + "'}";
     }
 }
+

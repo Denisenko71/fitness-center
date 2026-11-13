@@ -53,3 +53,4 @@ public class Training {
                 ", clients=" + clients.size() + "/" + maxParticipants + "}";
     }
 }
+

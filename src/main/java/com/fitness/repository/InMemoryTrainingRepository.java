@@ -26,3 +26,4 @@ public class InMemoryTrainingRepository implements TrainingRepository {
         return new ArrayList<>(storage.values());
     }
 }
+
