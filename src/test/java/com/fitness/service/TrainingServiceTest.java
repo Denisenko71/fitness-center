@@ -5,6 +5,7 @@ import com.fitness.model.Trainer;
 import com.fitness.model.Training;
 import com.fitness.repository.InMemoryTrainingRepository;
 import com.fitness.repository.TrainingRepository;
+import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,7 +19,7 @@ class TrainingServiceTest {
     @BeforeEach
     void setUp() {
         repository = new InMemoryTrainingRepository();
-        service = new TrainingService(repository);
+        service = new TrainingService(repository, new SimpleMeterRegistry());
 
         Trainer trainer = new Trainer(1, "Денисенко Надежда", "Йога");
 
@@ -93,4 +94,3 @@ class TrainingServiceTest {
                 "Сообщение должно говорить, что тренировка не найдена");
     }
 }
-
